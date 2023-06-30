@@ -27,5 +27,9 @@ const showDialog = ref(false);
         ><el-icon><Switch /></el-icon></RouterLink
     ></el-button>
   </el-button-group>
-  <MapServerAdd :show-dialog="showDialog"></MapServerAdd>
+  <MapServerAdd
+    :show-dialog="showDialog"
+    :map="map"
+    @show-change="showDialog = false"
+  ></MapServerAdd>
 </template>
